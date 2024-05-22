@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>期末報告</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header"> 
+        <a href="index.html" class="logo"> 
+            <img src="img/logo1.png" alt="Logo" class="logo-default">
+            <img src="img/logo2.png" alt="Logo" class="logo-scrolled">
+        </a>
+        <nav class="nav-menu"> 
+            <ul>
+                <li>
+                    <a href="#brands" class="brand">五大品牌</a>
+                    <ul class="dropdown">
+                        <li><a href="product1.html">山木島</a></li>
+                        <li><a href="product2.html">如邑堂</a></li>
+                        <li><a href="product3.html">軒記</a></li>
+                        <li><a href="product4.html">明月堂</a></li>
+                        <li><a href="product5.html">哈頓</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#deals" class="deals">優惠商品</a>
+                    <ul class="dropdown">
+                        <li><a href="#deal1">優惠 1</a></li>
+                        <li><a href="#deal2">優惠 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#home" class="home">賣場名稱</a></li>
+                <li><a href="#about" class="about">關於我們</a></li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+            <a href="#login"><i class="fas fa-user"></i></a> 
+            <a href="#cart"><i class="fas fa-shopping-cart"></i></a> 
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i> 
+                <form class="search-form" id="search-form">
+                    <input type="text" placeholder="搜尋商品..." id="search-input">
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <header id="banner">
+        <div class="overlay">
+            <a href="#" class="banner-text"></a>
+        </div>
+        <div id="dots"></div>
+    </header>
+
+    <!-- Horizontal Carousel Section -->
+    <section id="carousel-container">
+        <div class="title-container">
+        <div class="line-left"></div>
+        <h2 style="font-size: 32px; font-weight: bolder; font-family: 微軟正黑體;">熱銷商品</h2>
+        <div class="line-right"></div>
+        </div>
+        <div class="carousel">
+            <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
+            <div class="carousel-item left"></div>
+            <div class="carousel-item middle"></div>
+            <div class="carousel-item right"></div>
+            <button class="carousel-button next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="video-section">
+        <div class="title-container">
+            <div class="line-left"></div>
+            <h2 style="font-size: 32px; font-weight: bolder; font-family: 微軟正黑體;">品牌影片</h2>
+            <div class="line-right"></div>
+        </div>
+        <div class="video-container">
+            <iframe id="youtube-video" width="1120" height="630" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-description">
+                <h3 id="video-title"></h3>
+                <p id="video-text"></p>
+            </div>
+        </div>
+        <div class="brand-logos">
+            <div class="logo-container">
+                <img src="img/brand1.png" alt="山木島" onclick="changeVideo(0)">
+                <div class="logo-text">山木島</div>
+            </div>
+            <div class="logo-container">
+                <img src="img/brand2.png" alt="如邑堂" onclick="changeVideo(1)">
+                <div class="logo-text">如邑堂</div>
+            </div>
+            <div class="logo-container">
+                <img src="img/brand3.png" alt="軒記" onclick="changeVideo(2)">
+                <div class="logo-text">軒記</div>
+            </div>
+            <div class="logo-container">
+                <img src="img/brand4.png" alt="明月堂" onclick="changeVideo(3)">
+                <div class="logo-text">明月堂</div>
+            </div>
+            <div class="logo-container">
+                <img src="img/brand5.png" alt="哈頓" onclick="changeVideo(4)">
+                <div class="logo-text">哈頓</div>
+            </div>
+        </div>
+    </section>
+
+    <script src="index01.js"></script>
+    <script src="index02.js"></script>
+    <script src="index03.js"></script>
+    <script src="carousel.js"></script>
+    <script src="youtube.js"></script>
+</body>
+</html>
