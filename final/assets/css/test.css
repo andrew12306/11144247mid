@@ -1,0 +1,46 @@
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #f5deb3; /* 淺棕色 */
+    border-radius: 10px; /* 圓角 */
+    padding: 10px;
+    transition: height 0.3s ease; /* 使過渡更平滑 */
+}
+
+#header.logo {
+    height: 50px; /* logo + 盒家人雜貨店 的高度 */
+}
+
+#header .brand {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.brand p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
