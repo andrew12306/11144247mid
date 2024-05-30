@@ -1,0 +1,606 @@
+
+:root {
+    --transition-time: 0.3s;
+    height: 10000px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #E8E8D0;
+}
+
+/* 初始样式 */
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    transition: background-color var(--transition-time), height var(--transition-time);
+    z-index: 1000;
+}
+
+#header.scrolled {
+    height: 100px;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.title-container h2 {
+    margin: 0 20px;
+    font-size: 24px;
+}
+
+.line-left, .line-right {
+    height: 2px;
+    background: linear-gradient(to right, black, transparent);
+    flex: 1;
+}
+
+.line-right {
+    background: linear-gradient(to left, black, transparent);
+}
+
+.logo {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.logo img {
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+.logo img.logo-default {
+    display: block;
+}
+
+#header.scrolled .logo img.logo-default {
+    display: none;
+}
+
+#header.scrolled .logo img.logo-scrolled {
+    display: block;
+    position: absolute;
+    left: -50px; /* 向左移动 */
+    bottom: -160px; /* 向下移动 */
+}
+
+/* 滚动后的样式 */
+#header.scrolled .logo {
+    position: relative;
+}
+
+.nav-menu {
+    flex: 6;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    position: relative;
+    margin: 0 40px;
+}
+
+.nav-menu a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 30px;
+    transition: color var(--transition-time), transform var(--transition-time);
+    font-weight: bolder;
+}
+
+.nav-menu li:hover > a {
+    color: #00AEAE;
+    transform: scale(1.0);
+}
+
+.nav-menu a:hover {
+    color: #00AEAE;
+    transform: scale(1.1);
+}
+
+.nav-menu .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    z-index: 1001;
+    border: 1px solid black;
+    border-radius: 8px;
+    min-width: 180px;
+}
+
+.nav-menu .dropdown li {
+    margin: 0;
+}
+
+.nav-menu .dropdown a {
+    padding: 10px 20px;
+    display: block;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color var(--transition-time), transform var(--transition-time);
+}
+
+.nav-menu .dropdown a:hover {
+    background-color: white;
+    font-size: 20px;
+}
+
+.nav-menu li:hover .dropdown {
+    display: block;
+}
+
+/* 导航栏操作 */
+.nav-actions {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-actions a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 30px;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-icon {
+    color: var(--text-color);
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.search-form {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    align-items: center;
+}
+
+.search-form.active {
+    display: flex;
+}
+
+.search-form input {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-left: 5px;
+    outline: none;
+}
+
+/* Banner样式 */
+#banner {
+    position: relative;
+    top: 150px;
+    width: 100%;
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease-in-out, background-size 0.5s ease-in-out;
+}
+
+#dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #000;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color var(--transition-time), opacity var(--transition-time);
+    opacity: 0;
+}
+
+#banner:hover .overlay {
+    opacity: 1;
+}
+
+.overlay:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.banner-text {
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-actions {
+        flex-direction: column;
+    }
+
+    #banner {
+        height: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-menu a {
+        font-size: 24px;
+    }
+
+    .nav-actions a {
+        font-size: 24px;
+    }
+
+    #banner {
+        height: 400px;
+    }
+}
+
+#carousel-container {
+    margin-top: 250px; /* 向下移动250px */
+    text-align: center;
+}
+
+.carousel {
+    position: relative;
+    width: 60%; /* 调整为合适的宽度 */
+    height: 350px; /* 根据需要调整高度 */
+    margin: 0 auto;
+    overflow: visible; /* 允许溢出显示阴影 */
+}
+
+.carousel-item {
+    position: absolute;
+    top: 50px; /* 将照片向上移动50px */
+    width: 500px;
+    height: 350px;
+    overflow: hidden;
+    text-align: center;
+    opacity: 0.5;
+    transition: all var(--transition-time) ease;
+    background: none;
+    box-shadow: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; /* 将内容推到容器底部 */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: none; /* 确保这里没有滤镜影响图片 */
+}
+
+.carousel-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 300px;
+    background-color: rgba(128, 128, 128, 0.7);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-link:hover .carousel-overlay {
+    opacity: 1;
+}
+
+.carousel-overlay span {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+}
+
+.carousel-link {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+.carousel-item p {
+    font-size: 18px;
+    margin-top: 10px;
+    z-index: 1; /* 确保文本在阴影之上 */
+    margin-bottom: 20px; /* 调整底部间距 */
+    color: black; /* 确保文本颜色没有被修改 */
+    filter: none; /* 确保这里没有滤镜影响文本 */
+}
+
+.carousel-item.active {
+    transform: translateX(-50%) scale(1.1);
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 999; /* 确保按钮在 header 之下 */
+}
+
+.carousel-item.middle {
+    left: 50%;
+    transform: translateX(-50%) scale(1.1);
+    width: 600px;
+    z-index: 2;
+    filter: brightness(1.2); /* 中间图片更亮 */
+}
+
+.carousel-item.left {
+    left: calc(50% - 300px); /* 原位置 - 500px - 150px + 200px 调整为 -300px */
+    width: 400px; /* 调整宽度为400px */
+    transform: translateX(-100%) scale(0.9); /* 左侧图片缩小 */
+    z-index: 1;
+    filter: brightness(0.7); /* 左侧图片较暗 */
+}
+
+.carousel-item.right {
+    left: calc(50% - 100px); /* 原位置 + 500px + 150px - 400px 调整为 250px */
+    width: 400px; /* 调整宽度为400px */
+    transform: translateX(100%) scale(0.9); /* 右侧图片缩小 */
+    z-index: 1;
+    filter: brightness(0.7); /* 右侧图片较暗 */
+}
+
+.carousel-button.prev {
+    left: -300px;
+}
+
+.carousel-button.next {
+    right: -320px;
+}
+
+/* 滑动动画效果 */
+.slide-out-left {
+    animation: slideOutLeft var(--transition-time) forwards;
+}
+
+.slide-out-right {
+    animation: slideOutRight var(--transition-time) forwards;
+}
+
+.slide-in-left {
+    animation: slideInLeft var(--transition-time) forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight var(--transition-time) forwards;
+}
+
+@keyframes slideOutLeft {
+    from {
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-150%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-150%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+}
+
+.carousel-item::after {
+    content: '';
+    position: absolute;
+    bottom: 20; /* 调整阴影位置 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%; /* 调整阴影大小 */
+    height: 50px; /* 调整阴影高度 */
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); /* 创建真实物理阴影 */
+    border-radius: 50%; /* 将阴影调整为圆形 */
+    z-index: 0; /* 确保阴影在图片下方 */
+    filter: blur(8px); /* 调整阴影模糊度 */
+    margin-bottom: 20px; /* 确保阴影紧贴图片下方 */
+}
+
+#video-section {
+    margin-top: 200px; /* 与轮转商品部分距离 */
+    text-align: center;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    margin-top: 100px;
+    
+}
+
+#youtube-video {
+    width: 1120px;
+    height: 630px;
+    border: 10px solid transparent; /* 设置透明边框以便显示渐变效果 */
+    border-radius: 15px; /* 添加圆角 */
+    background-image: linear-gradient(white, white), linear-gradient(45deg, white, black); /* 渐变色 */
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加动画效果 */
+}
+
+#youtube-video:hover {
+    transform: scale(1.05); /* 悬停时放大 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* 悬停时增加阴影 */
+}
+
+.video-description {
+    margin-left: 20px;
+    width: 500px;
+    text-align: left;
+    font-size: 25px;
+    font-weight: bolder;
+    background: linear-gradient(to top, #E8E8D0, white);
+    padding: 20px;
+    border-radius: 10px;
+    height: 630px; /* 设置高度与影片播放器一样 */
+    display: flex; /* 使用flex布局 */
+    flex-direction: column; /* 垂直布局 */
+    justify-content: flex-start; /* 垂直方向从顶部对齐 */
+}
+
+#video-title {
+    margin-top: -5px;
+    color:#003E3E;
+    align-self: flex-start; /* 与父元素顶部对齐 */
+}
+
+#video-text {
+    font-size: 20px;
+    color: 	#007979;
+  
+    }
+
+.brand-logos {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    margin-top: 100px;
+}
+
+.logo-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brand-logos img {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease; /* 添加滤镜效果的过渡 */
+}
+
+.logo-container:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.5); /* 悬停时变暗 */
+}
+
+.logo-container:hover .logo-text {
+    opacity: 1; /* 悬停时显示文字 */
+}
+
+.logo-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 30px;
+    font-weight: bolder ;
+    opacity: 0; /* 初始状态下隐藏 */
+    transition: opacity 0.3s ease; /* 添加透明度过渡效果 */
+    pointer-events: none; /* 确保文本不影响鼠标事件 */
+}
