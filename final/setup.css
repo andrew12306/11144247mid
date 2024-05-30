@@ -1,0 +1,76 @@
+.setup {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #646262;
+    border-radius: 25px;
+    gap: 20px;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-bottom: 5em;
+    transition: 0.5s ease-in-out;
+}
+
+
+.setup:hover {
+    border: 1px solid black;
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+.fieldtitle,
+.field {
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    border-radius: 25px;
+    gap: 10px;
+    padding: 0.6em;
+}
+
+.field {
+    background-color: #b6b6b6;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+
+}
+
+.input-field {
+    background: none;
+    border: none;
+    outline: none;
+    color: #d3d3d3;
+    width: 100%;
+}
+
+.button1,
+.button2 {
+    background-color: #9d9d9d;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    width: 100%;
+    transition: 0.25s ease-in-out;
+}
+
+.button1,
+.button2 a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.button1:hover {
+    background-color: green;
+    transform: scale(1.05);
+}
+
+.button2:hover {
+    background-color: red;
+    transform: scale(1.05);
+}
