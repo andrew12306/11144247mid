@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
+    <title>購物車</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header id="header"> 
+        <a href="index.html" class="logo"> 
+            <img src="img/logo1.png" alt="Logo" class="logo-default">
+            <img src="img/logo2.png" alt="Logo" class="logo-scrolled">
+        </a>
+        <nav class="nav-menu"> 
+            <ul>
+                <li>
+                    <a href="#brands" class="brand">五大品牌</a>
+                    <ul class="dropdown">
+                        <li><a href="product1.html">山木島</a></li>
+                        <li><a href="product2.html">如邑堂</a></li>
+                        <li><a href="product3.html">軒記</a></li>
+                        <li><a href="product4.html">明月堂</a></li>
+                        <li><a href="product5.html">哈頓</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#deals" class="deals">優惠商品</a>
+                    <ul class="dropdown">
+                        <li><a href="#deal1">優惠 1</a></li>
+                        <li><a href="#deal2">優惠 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="aboutus.html" class="about">關於我們</a></li>
+                <li>
+                    <a href="#brands" class="brand">會員中心</a>
+                    <ul class="dropdown">
+                        <li><a href="issignin.html">登出</a></li>
+                        <li><a href="history.html">歷史訂單</a></li>
+                        <li><a href="setup.html">會員修改資料</a></li>
+                    </ul>
+                </li>
+               
+            </ul>
+        </nav>
+        <div class="nav-actions">
+            <a href="login.html"><i class="fas fa-user"></i></a> 
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a> 
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i> 
+                <form class="search-form" id="search-form">
+                    <input type="text" placeholder="搜尋商品..." id="search-input">
+                </form>
+            </div>
+        </div>
+    </header>
+    
+    <div class="content"></div>
+    <div class="history"><h2>最新訂單</h2></div>
+    <div class="cart-container">
+        <div class="level">
+            <div></div>
+            <div><p>商品</p></div>
+            <div><p>商品名稱</p></div>
+            <div><p>數量</p></div>
+            <div><p>單價</p></div>
+            <div></div>
+        </div>
+        <hr>
+        <div class="product-content">
+            <div></div>
+            <div><p><img src="img/banner01.png" alt="山木島禮盒"></p></div>
+            <div><p>山木島禮盒</p></div>
+            <div class="count"><p><input type="number" value="1"></p></div>
+            <div><p>$500</p></div>
+        </div>
+        <div class="product-content">
+            <div></div>
+            <div><p><img src="img/banner01.png" alt="山木島禮盒"></p></div>
+            <div><p>山木島禮盒</p></div>
+            <div class="count"><p><input type="number" value="1"></p></div>
+            <div><p>$500</p></div>
+        </div>
+    </div>
+    <div class="history"><h2>歷史訂單</h2></div>
+    <div class="cart-container">
+        <div class="level">
+            <div></div>
+            <div><p>商品</p></div>
+            <div><p>商品名稱</p></div>
+            <div><p>數量</p></div>
+            <div><p>單價</p></div>
+            <div></div>
+        </div>
+        <hr>
+        <div class="product-content">
+            <div></div>
+            <div><p><img src="img/banner01.png" alt="山木島禮盒"></p></div>
+            <div><p>山木島禮盒</p></div>
+            <div class="count"><p><input type="number" value="1"></p></div>
+            <div><p>$500</p></div>
+        </div>
+        <div class="product-content">
+            <div></div>
+            <div><p><img src="img/banner01.png" alt="山木島禮盒"></p></div>
+            <div><p>山木島禮盒</p></div>
+            <div class="count"><p><input type="number" value="1"></p></div>
+            <div><p>$500</p></div>
+        </div>
+    </div>
+
+    <script src="assets/js/index01.js"></script>
+    <script src="assets/js/index02.js"></script>
+    <script src="assets/js/index03.js"></script>
+</body>
+</html>
