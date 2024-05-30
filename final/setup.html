@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/cart.css">
-    <title>購物車</title>
+    <link rel="stylesheet" href="assets/css/setup.css">
+    <title>期末報告</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header Section -->
     <header id="header"> 
         <a href="index.html" class="logo"> 
             <img src="img/logo1.png" alt="Logo" class="logo-default">
@@ -57,60 +60,19 @@
             </div>
         </div>
     </header>
-
-    <div class="content"></div>
-    <div class="cart-container">
-        <div class="level">
-            <div></div>
-            <div><p>商品</p></div>
-            <div><p>商品名稱</p></div>
-            <div><p>數量</p></div>
-            <div><p>單價</p></div>
-            <div><p>功能</p></div>
-            <div></div>
-        </div>
-        <hr>
-        <div class="product-content">
-            <div></div>
-            <div><p><img src="../img/banner01.png" alt="山木島禮盒"></p></div>
-            <div><p>山木島禮盒</p></div>
-            <div class="count"><p><input type="number" value="1"></p></div>
-            <div><p>$500</p></div>
-            <div><p><button>刪除</button></p></div>
-            <div></div>
-        </div>
-        <hr>
-        <div class="carlast">
-            <div class="total">
-                <div><p>總計</p></div>
-                <div><p>500</p></div>
-                <div><p>元</p></div>
-            </div>
-        </div>
-    </div>
-    <form action="#" method="POST">
-        <div class="paymethod">
-            <h2>付款方式</h2>
-            <ul>
-                <li>
-                    <input type="radio" id="pay1" name="pay" value="超商/貨到付款">
-                    <label for="pay1">超商/貨到付款</label>
-                </li>
-                <li>
-                    <input type="radio" id="pay2" name="pay" value="宅配到府/貨到付款">
-                    <label for="pay2">宅配到府/貨到付款</label>
-                </li>
-            </ul>
-            <div>
-                <h2>送貨地址</h2>
-                <input type="text" class="local" name="local" size="100" placeholder="請輸入送貨地址">
-            </div>
-            <div class="order"> 
-                <div><a href="index.html"><button type="button" class="button1">繼續逛逛</button></a></div>
-                <div><button type="submit" class="button2">下單</button></div>
-            </div>
-        </div>  
-    </form>
+    
+        <form class="setup" action="" method="POST">     
+                <div class="fieldtitle"><h1>會員資料修改</h1></div>
+                <div class="field"><input class="input-field" type="text" id="name" name="name" placeholder="姓名" value=""></div>
+                <div class="field"><input class="input-field" type="text" id="phone" name="phone" placeholder="電話" value=""></div>
+                <div class="field"><input class="input-field" type="email" id="location" name="location" placeholder="電子郵件" required="required" value=""></div>
+                <div class="field"><input class="input-field" type="text" id="username" name="username" readonly="readonly" placeholder="帳號" value=""></div>
+                <div class="field"><input class="input-field" type="text" id="password" name="password" placeholder="密碼" value=""></div>
+            <button class="button1" type="submit" class="loginbutton">確定修改</button>
+            <a href="index.html">
+                <button class="button2" type="button" class="loginbutton">取消</button>
+            </a>
+        </form>
     <script src="assets/js/index01.js"></script>
     <script src="assets/js/index02.js"></script>
     <script src="assets/js/index03.js"></script>
