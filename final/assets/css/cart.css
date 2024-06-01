@@ -26,6 +26,10 @@ ul {
     padding: 10px 0;
 }
 
+.level{
+    font-weight: bolder;
+}
+
 .level p,
 .product-content p {
     margin: 0;
