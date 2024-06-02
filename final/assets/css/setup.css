@@ -1,9 +1,25 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+header, footer {
+    width: 100%;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 60px); /* Adjust this value according to your header and footer height */
+}
+
 .setup {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
-    position: flex;
-    margin-top: 200px;
-    margin-left: 650px;
     width: 500px;
     height: 500px;
     text-align: center;
@@ -16,17 +32,14 @@
     transition: 0.5s ease-in-out;
 }
 
-
 .setup:hover {
     border: 1px solid black;
-
 }
 
 .fieldtitle,
 .field {
     align-items: center;
     justify-content: center;
-
     color: white;
     border-radius: 25px;
     gap: 10px;
@@ -36,7 +49,6 @@
 .field {
     background-color: #b6b6b6;
     box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
-
 }
 
 .input-field {
@@ -75,4 +87,14 @@
 .button2:hover {
     background-color: red;
     transform: scale(1.05);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
 }
