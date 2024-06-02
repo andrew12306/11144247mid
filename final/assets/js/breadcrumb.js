@@ -1,12 +1,17 @@
-document.querySelectorAll('.sidebar a').forEach(item => {
+document.querySelectorAll('.sidebar a, .nav-menu a').forEach(item => {
     item.addEventListener('click', function(event) {
         event.preventDefault();
         const category = this.getAttribute('data-category');
         updateBreadcrumb(category);
+        filterProducts(category);
 
-        // 跳轉到相應頁面，如果需要可以將其改為AJAX請求更新內容而不是跳轉
+        // 跳转到相应页面
         const targetPage = this.getAttribute('href');
-        window.location.href = targetPage; 
+        if (targetPage.startsWith('#')) {
+            // 如果是锚点链接，则不进行页面跳转
+            return;
+        }
+        window.location.href = targetPage;
     });
 });
 
@@ -22,4 +27,15 @@ function updateBreadcrumb(category) {
     } else {
         currentCategory.textContent = category;
     }
+}
+
+function filterProducts(category) {
+    const products = document.querySelectorAll('.product-item');
+    products.forEach(product => {
+        if (product.getAttribute('data-category').includes(category)) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+    });
 }
