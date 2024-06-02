@@ -298,6 +298,10 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+.overlay a {
+    text-decoration: none;
+}
+
 .banner-text {
     color: white;
     font-size: 48px;
