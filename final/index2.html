@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style2.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header id="header"> 
+        <a href="index.html" class="logo"> 
+            <img src="img/logo1.png" alt="Logo" class="logo-default">
+            <img src="img/logo2.png" alt="Logo" class="logo-scrolled">
+        </a>
+        <nav class="nav-menu"> 
+            <ul>
+                <li>
+                    <a href="#brands" class="brand">五大品牌</a>
+                    <ul class="dropdown">
+                        <li><a href="index2.html#category1">山木島</a></li>
+                        <li><a href="index2.html#category2">如邑堂</a></li>
+                        <li><a href="index2.html#category3">軒記</a></li>
+                        <li><a href="index2.html#category7">明月堂</a></li>
+                        <li><a href="index2.html#category5">哈頓</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#deals" class="deals">優惠商品</a>
+                    <ul class="dropdown">
+                        <li><a href="index2.html#category6">精選單品</a></li>
+                        <li><a href="index2.html#category7">精選禮盒</a></li>
+                        <li><a href="index2.html#category8">優惠商品</a></li>
+                    </ul>
+                </li>
+                <li><a href="aboutus.html" class="about">關於我們</a></li>
+                <li>
+                    <a href="#brands" class="brand">會員中心</a>
+                    <ul class="dropdown">
+                        <li><a href="issignin.html">登出</a></li>
+                        <li><a href="history.html">歷史訂單</a></li>
+                        <li><a href="setup.html">會員修改資料</a></li>
+                    </ul>
+                </li>
+               
+            </ul>
+        </nav>
+        <div class="nav-actions">
+            <a href="login.html"><i class="fas fa-user"></i></a> 
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a> 
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i> 
+                <form class="search-form" id="search-form">
+                    <input type="text" placeholder="搜尋商品..." id="search-input">
+                </form>
+            </div>
+        </div>
+    </header>
+
+  <!-- Breadcrumb Section -->
+  <div class="breadcrumb-container">
+    <div class="breadcrumb" id="breadcrumb">
+        <a href="index2.html">全部商品</a>
+    </div>
+</div>
+
+<!-- Main Content Section -->
+<main>
+    <div class="content-wrapper">
+        <!-- Sidebar for categories -->
+        <aside class="sidebar">
+            <h2>品牌分類</h2>
+            <ul>
+                <li><a href="#category1" data-category1="山木島">山木島</a></li>
+                <li><a href="#category2" data-category="如邑堂">如邑堂</a></li>
+                <li><a href="#category3" data-category="軒記">軒記</a></li>
+                <li><a href="#category4" data-category="明月堂">明月堂</a></li>
+                <li><a href="#category5" data-category="哈頓">哈頓</a></li>
+            </ul>
+            <h2>商品分類</h2>
+            <ul>
+                <li><a href="#category6" data-category="精選單品">精選單品</a></li>
+                <li><a href="#category7" data-category="精選禮盒">精選禮盒</a></li>
+                <li><a href="#category8" data-category="優惠商品">優惠商品</a></li>
+            </ul>
+        </aside>
+
+        <!-- Product grid section -->
+        <section class="product-section">
+            <h2 style="margin-left: 20px;">全部商品</h2>
+            <div class="product-grid">
+                <div class="product-item" data-category="山木島, 精選禮盒 , 優惠商品" data-name="山木繁花">
+                    <img src="img/product/No1-1.jpg" alt="商品1">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>山木繁花</h2>
+                    <span class="old-price">$780</span>
+                    <span class="promo-price">$680</span>
+                </div>
+                <div class="product-item" data-category="山木島 , 精選禮盒" data-name="山木富貴">
+                    <img src="img/product/No1-2.jpg" alt="商品2">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>山木富貴</h2>
+                    <span class="price">$780</span>
+                </div>
+                <div class="product-item" data-category="山木島 , 精選禮盒" data-name="山木品茶">
+                    <img src="img/product/No1-3.jpg" alt="商品3">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>山木品茶</h2>
+                    
+                    <span class="price">$500</span>
+                </div>
+                <div class="product-item" data-category="山木島 , 精選禮盒" data-name="山木藏玉">
+                    <img src="img/product/No1-4.jpg" alt="商品4">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>山木藏玉</h2>
+                    
+                    <span class="price">$500</span>
+                </div>
+                <div class="product-item" data-category="山木島 , 精選單品" data-name="花見餅乾小禮盒">
+                    <img src="img/product/No1-5.jpg" alt="商品5">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>花見餅乾小禮盒</h2>
+                   
+                    <span class="price">$400</span>
+                </div>
+                <div class="product-item" data-category="山木島 , 精選單品" data-name="森林酥小禮盒">
+                    <img src="img/product/No1-6.jpg" alt="商品6">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>森林酥小禮盒</h2>
+                   
+                    <span class="price">$400</span>
+                </div>
+                <div class="product-item" data-category="如邑堂 , 精選禮盒 , 優惠商品" data-name="經典雙口味太陽餅">
+                    <img src="img/product/No2-1.jpg" alt="商品7">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>經典雙口味太陽餅</h2>
+                    <span class="old-price">$600</span>
+                    <span class="promo-price">$500</span>
+                </div>
+                <div class="product-item" data-category="如邑堂 , 精選禮盒" data-name="綜合雙口味太陽餅">
+                    <img src="img/product/No2-2.jpg" alt="商品8">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>綜合雙口味太陽餅</h2>
+                    
+                    <span class="price">$600</span>
+                </div>
+                <div class="product-item" data-category="如邑堂 , 精選單品" data-name="餡金流蛋黃酥9入">
+                    <img src="img/product/No2-3.jpg" alt="商品9">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>餡金流蛋黃酥9入</h2>
+                    
+                    <span class="price">$700</span>
+                </div>
+                <div class="product-item" data-category="如邑堂 , 精選單品" data-name="餡金流蛋黃酥6入">
+                    <img src="img/product/No2-4.jpeg" alt="商品10">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>餡金流蛋黃酥6入</h2>
+                    
+                    <span class="price">$600</span>
+                </div>
+                <div class="product-item" data-category="如邑堂 , 精選單品" data-name="原味牛軋糖">
+                    <img src="img/product/No2-5.jpg" alt="商品11">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>原味牛軋糖</h2>
+                  
+                    <span class="price">$400</span>
+                </div>
+                <div class="product-item" data-category="如邑堂 , 精選單品" data-name="蔓越莓牛軋糖">
+                    <img src="img/product/No2-6.jpg" alt="商品12">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>蔓越莓牛軋糖</h2>
+                   
+                    <span class="price">$400</span>
+                </div>
+                <div class="product-item" data-category="軒記 , 精選禮盒 , 優惠商品" data-name="忘川聯名禮盒">
+                    <img src="img/product/No3-1.jpg" alt="商品13">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>忘川聯名禮盒</h2>
+                    <span class="old-price">$1300</span>
+                    <span class="promo-price">$1200</span>
+                </div>
+                <div class="product-item" data-category="軒記 , 精選禮盒" data-name="橘舍經典禮盒">
+                    <img src="img/product/No3-2.jpg" alt="商品14">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>橘舍經典禮盒</h2>
+                    <span class="price">$1300</span>
+                </div>
+                <div class="product-item" data-category="軒記 , 精選單品" data-name="經典蜜汁豬肉乾">
+                    <img src="img/product/No3-3.jpg" alt="商品15">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>經典蜜汁豬肉乾</h2>
+                    <span class="price">$600</span>
+                </div>
+                <div class="product-item" data-category="軒記 , 精選單品" data-name="川辣豬肉乾">
+                    <img src="img/product/No3-4.jpg" alt="商品16">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>川辣豬肉乾</h2>
+                    
+                    <span class="price">$600</span>
+                </div>
+                <div class="product-item" data-category="軒記 , 精選單品" data-name="黑胡椒牛肉乾">
+                    <img src="img/product/No3-5.jpg" alt="商品17">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>黑胡椒牛肉乾</h2>
+                    
+                    <span class="price">$700</span>
+                </div>
+                <div class="product-item" data-category="軒記 , 精選單品" data-name="川辣牛肉乾">
+                    <img src="img/product/No3-6.jpg" alt="商品18">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>川辣牛肉乾</h2>
+                   
+                    <span class="price">$700</span>
+                </div>
+                <div class="product-item" data-category="明月堂 , 精選禮盒 , 優惠商品" data-name="羊羹禮盒">
+                    <img src="img/product/No4-1.jpg" alt="商品19">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>羊羹禮盒</h2>
+                    <span class="old-price">780元</span>
+                    <span class="promo-price">680元</span>
+                </div>
+                <div class="product-item" data-category="明月堂 , 精選禮盒" data-name="明月禮盒">
+                    <img src="img/product/No4-2.jpg" alt="商品20">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>明月禮盒</h2>
+                    
+                    <span class="price">$700</span>
+                </div>
+                <div class="product-item" data-category="明月堂 , 精選單品" data-name="銅鑼燒">
+                    <img src="img/product/No4-3.jpg" alt="商品21">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>銅鑼燒</h2>
+                    
+                    <span class="price">$300</span>
+                </div>
+                <div class="product-item" data-category="明月堂 , 精選單品" data-name="牛皮蛋糕">
+                    <img src="img/product/No4-4.jpg" alt="商品22">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>牛皮蛋糕</h2>
+                    
+                    <span class="price">$300</span>
+                </div>
+                <div class="product-item" data-category="明月堂 , 精選單品" data-name="草莓大福">
+                    <img src="img/product/No4-5.jpg" alt="商品23">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>草莓大福</h2>
+                   
+                    <span class="price">$300</span>
+                </div>
+                <div class="product-item" data-category="明月堂 , 精選單品" data-name="栗大福">
+                    <img src="img/product/No4-6.jpg" alt="商品24">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>栗大福</h2>
+                    
+                    <span class="price">$300</span>
+                </div>
+                <div class="product-item" data-category="哈頓 , 精選禮盒 , 優惠商品" data-name="奶酒手工奶酪禮盒">
+                    <img src="img/product/No5-1.jpg" alt="商品25">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>奶酒手工奶酪禮盒</h2>
+                    <span class="old-price">900元</span>
+                    <span class="promo-price">800元</span>
+                </div>
+                <div class="product-item" data-category="哈頓 , 精選禮盒" data-name="手工奶酪禮盒">
+                    <img src="img/product/No5-2.jpg" alt="商品26">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>手工奶酪禮盒</h2>
+                  
+                    <span class="price">$900</span>
+                </div>
+                <div class="product-item" data-category="哈頓, 精選單品" data-name="頂級黑可可">
+                    <img src="img/product/No5-3.jpg" alt="商品27">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>頂級黑可可</h2>
+                   
+                    <span class="price">$500</span>
+                </div>
+                <div class="product-item" data-category="哈頓 , 精選單品 " data-name="煙燻巧克力">
+                    <img src="img/product/No5-4.jpg" alt="商品28">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>煙燻巧克力</h2>
+                   
+                    <span class="price">$500</span>
+                </div>
+                <div class="product-item" data-category="哈頓 , 精選單品 " data-name="蜂蜜橙花鳳梨">
+                    <img src="img/product/No5-5.jpg" alt="商品29">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>蜂蜜橙花鳳梨</h2>
+                  
+                    <span class="price">$500</span>
+                </div>
+                <div class="product-item" data-category="哈頓 , 精選單品" data-name="普羅旺斯薰衣草"> 
+                    <img src="img/product/No5-6.jpg" alt="商品30">
+                    <div class="add-to-cart"><a href="productA.html">進入商品頁面</a></div>
+                    <h2>普羅旺斯薰衣草</h2>
+                    
+                    <span class="price">$500</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Empty right section -->
+        <div class="right-section"></div>
+    </div>
+</main>
+
+<footer id="footer">
+    <a href="index.html" class="footer-logo">
+        <img src="img/logo1.png" alt="Logo">
+    </a>
+    <div class="footer-links">
+        <a href="https://shanmudao12.shoplineapp.com/about/terms">隱私條款</a> |
+        <a href="https://shanmudao12.shoplineapp.com/about/terms">條款及細則</a> |
+        <a href="https://shanmudao12.shoplineapp.com/about/policy">退換貨規則</a> |
+        <a href="https://shanmudao12.shoplineapp.com/about/delivery-policy">運送政策</a> |
+        <span>2024@盒你相遇</span>
+    </div>
+
+    <div class="footer-contact">
+        <p>聯絡我們</p>
+        <p>電話 :08-000***</p>
+        <p>時間 : 11:00~19:00</p>
+        <p>地址 :桃園市中壢區中北路200號</p>
+        <p>E-mail : JackWinsYa@gmail.com</p>
+        <p>統一編號：24443976</p>
+        <div class="contact-icons">
+            <a href="mailto:JackWinsYa@gmail.com" target="_blank">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.instagram.com/box_hehe" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://line.me/R/ti/p/0906002694" target="_blank">
+                <i class="fab fa-line"></i>
+            <a>
+        </div>
+    </div>
+    </div>
+</footer>
+
+    <script src="assets/js/index02.js"></script>
+    <script src="assets/js/index03.js"></script>
+    <script src="assets/js/breadcrumb.js"></script>
+    <script src="assets/js/product.js"></script>
+</body>
+</html>
