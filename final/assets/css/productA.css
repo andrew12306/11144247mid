@@ -1,8 +1,12 @@
+body {
+    background-color: #eacab1;
+}
+
 .container {
     max-width: 1200px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #edebe8;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     display: flex;
@@ -125,4 +129,67 @@
 
 .buy-button:hover {
     background-color: #27ae60;
+}
+
+
+
+.condetail1 {
+    width: 1175px;
+    background-color: #bdbdbd;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+
+
+.namebar {
+    width: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.stars {
+    display: flex;
+    gap: 5px;
+
+}
+
+.stars img {
+    width: 30px;
+    height: 30px;
+
+}
+
+.submit {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.textarea {
+    width: 1175px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.submit .btn-container {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2b81ba
 }
