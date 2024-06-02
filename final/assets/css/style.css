@@ -1096,3 +1096,14 @@ body {
         text-align: center;
     }
 }
+
+.history {
+    background-color: #4F4F4F;
+    color: #ffffff;
+    padding: 1px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: Arial;
+    text-align: center;
+    border-radius: 60px;
+}
