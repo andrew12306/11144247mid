@@ -10,11 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
         'img/banner05.png'
     ];
     const links = [
-        'product1.html',
-        'product2.html',
-        'product3.html',
-        'product4.html',
-        'product5.html'
+        'index2.html#category1',
+        'index2.html#category2',
+        'index2.html#category3',
+        'index2.html#category4',
+        'index2.html#category5'
     ];
     const texts = [
         '進入山木島頁面',
