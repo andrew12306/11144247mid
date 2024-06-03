@@ -2,7 +2,7 @@ let currentIndex = 0;
 const items = [
     { img: 'img/product1.png', text: '山木繁花', link: 'index2.html#category1' },
     { img: 'img/product2.png', text: '原味牛軋糖', link: 'index2.html#category2' },
-    { img: 'img/product3.png', text: '羊羹禮盒', link: 'index2.htm#category3l' },
+    { img: 'img/product3.png', text: '羊羹禮盒', link: 'index2.html#category3' },
     { img: 'img/product4.png', text: '蜜汁豬肉乾', link: 'index2.html#category4' },
     { img: 'img/product5.png', text: '奶酒手工奶酪', link: 'index2.html#category5' },
 ];
