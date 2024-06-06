@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="-" onclick="minus()">
+    <input type="text" value="1" name="" id="output_num">
+    <input type="button" value="+" onclick="add()">
+
+    <script>
+        function minus(){
+            var num =Number(document.getElementById("output_num").value)
+            document.getElementById("output_num").value = num - 1;
+            if(num >= 1 ){
+                document.getElementById('output_num').value = num -1;
+            }else
+                alert('商品不能為負')
+        }
+
+        function add(){
+            var num =Number(document.getElementById("output_num").value)
+            document.getElementById("output_num").value = num + 1;
+            if(num < 99 ){
+                document.getElementById('output_num').value = num +1;
+            }else
+                alert('你買太多囉')
+        }
+    </script>
+</body>
+</html>
