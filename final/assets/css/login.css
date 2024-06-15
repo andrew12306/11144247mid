@@ -1,14 +1,10 @@
-body {
-    background-color: rgb(254, 242, 228);
-}
-
 .login {
     display: flex;
     flex-direction: column;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    top: 200px;
+    margin: 0 auto;
+    width: 300px;
     background-color: #000000;
     border-radius: 25px;
     gap: 20px;
@@ -18,10 +14,12 @@ body {
     transition: 0.5s ease-in-out;
 }
 
+
 .login:hover {
     border: 1px solid black;
-    transform: translate(-50%, -50%) scale(1.05);
+    transform: scale(1.05);
 }
+
 
 #head {
     text-align: center;
@@ -99,4 +97,8 @@ body {
     background-color: rgb(239, 234, 196);
     color: #000000;
     transform: scale(1.05);
+}
+
+#footer {
+    margin-top: 300px;
 }

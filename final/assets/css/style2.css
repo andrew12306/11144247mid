@@ -142,7 +142,8 @@ body {
     z-index: 1001;
     border: 1px solid black;
     border-radius: 8px;
-    min-width: 180px;
+    min-width: 100%;
+    text-align: center;
 }
 
 .nav-menu .dropdown li {
@@ -418,13 +419,10 @@ body {
 
 .breadcrumb {
     margin-top: 150px;
-    /* 確保面包屑導航在header下方，具體值可以調整 */
     margin-left: 250px;
-    /* 根據側邊欄的左邊距離進行調整 */
     padding: 10px 20px;
     font-size: 16px;
     background-color: transparent;
-    /* 設置背景色為透明 */
 }
 
 .breadcrumb a {
