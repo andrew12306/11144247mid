@@ -379,7 +379,6 @@ body {
 .product-item .price {
     display: block;
     font-size: 20px;
-    color: var(--highlight-color);
     margin-top: 10px;
     font-weight: bolder;
 }
