@@ -20,19 +20,19 @@
                 <li>
                     <a href="#brands" class="brand">五大品牌</a>
                     <ul class="dropdown">
-                        <li> <a href="index2.html?category=山木島" data-category="山木島" id="smd">山木島</a></li>
-                        <li><a href="index2.html?category=如邑堂" data-category="如邑堂" id="lid">如邑堂</a></li>
-                        <li><a href="index2.html?category=軒記" data-category="軒記" id="xj">軒記</a></li>
-                        <li><a href="index2.html?category=明月堂" data-category="明月堂" id="myd">明月堂</a></li>
-                        <li><a href="index2.html?category=哈頓" data-category="哈頓" id="hd">哈頓</a></li>
+                        <li> <a href="index2.html#category=山木島" data-category="山木島" id="smd">山木島</a></li>
+                        <li><a href="index2.html#category=如邑堂" data-category="如邑堂" id="lid">如邑堂</a></li>
+                        <li><a href="index2.html#category=軒記" data-category="軒記" id="xj">軒記</a></li>
+                        <li><a href="index2.html#category=明月堂" data-category="明月堂" id="myd">明月堂</a></li>
+                        <li><a href="index2.html#category=哈頓" data-category="哈頓" id="hd">哈頓</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#deals" class="deals">優惠商品</a>
                     <ul class="dropdown">
-                        <li><a href="index2.html?category=精選單品" data-category="精選單品">精選單品</a></li>
-						<li><a href="index2.html?category=精選禮盒" data-category="精選禮盒">精選禮盒</a></li>
-						<li><a href="index2.html?category=優惠商品" data-category="優惠商品">優惠商品</a></li>
+                        <li><a href="index2.html#category=精選單品" data-category="精選單品">精選單品</a></li>
+						<li><a href="index2.html#category=精選禮盒" data-category="精選禮盒">精選禮盒</a></li>
+						<li><a href="index2.html#category=優惠商品" data-category="優惠商品">優惠商品</a></li>
                     </ul>
                 </li>
                 <li><a href="aboutus.html" class="about">關於我們</a></li>
@@ -73,17 +73,17 @@
         <aside class="sidebar">
             <h2>品牌分類</h2>
             <ul>
-                <li><a href="index2.html?category=山木島" data-category="山木島" id="smd">山木島</a></li>
-                    <li><a href="index2.html?category=如邑堂" data-category="如邑堂" id="lid">如邑堂</a></li>
-                    <li><a href="index2.html?category=軒記" data-category="軒記" id="xj">軒記</a></li>
-                    <li><a href="index2.html?category=明月堂" data-category="明月堂" id="myd">明月堂</a></li>
-                    <li><a href="index2.html?category=哈頓" data-category="哈頓" id="hd">哈頓</a></li>
+                <li><a href="index2.html#category=山木島" data-category="山木島" id="smd">山木島</a></li>
+                    <li><a href="index2.html#category=如邑堂" data-category="如邑堂" id="lid">如邑堂</a></li>
+                    <li><a href="index2.html#category=軒記" data-category="軒記" id="xj">軒記</a></li>
+                    <li><a href="index2.html#category=明月堂" data-category="明月堂" id="myd">明月堂</a></li>
+                    <li><a href="index2.html#category=哈頓" data-category="哈頓" id="hd">哈頓</a></li>
             </ul>
             <h2>商品分類</h2>
             <ul>
-                <li><a href="index2.html?category=精選單品" data-category="精選單品">精選單品</a></li>
-				<li><a href="index2.html?category=精選禮盒" data-category="精選禮盒">精選禮盒</a></li>
-				<li><a href="index2.html?category=優惠商品" data-category="優惠商品">優惠商品</a></li>
+                <li><a href="index2.html#category=精選單品" data-category="精選單品">精選單品</a></li>
+				<li><a href="index2.html#category=精選禮盒" data-category="精選禮盒">精選禮盒</a></li>
+				<li><a href="index2.html#category=優惠商品" data-category="優惠商品">優惠商品</a></li>
             </ul>
         </aside>
 
@@ -324,41 +324,7 @@
     <script src="assets/js/index03.js"></script>
     <script src="assets/js/breadcrumb.js"></script>
     <script src="assets/js/product.js"></script>
-	<script>
-    
-    function getQueryParams() {
-        const params = new URLSearchParams(window.location.search);
-        return params.get('category');
-    }
 
-   
-    function updateBreadcrumb(category) {
-        const breadcrumbCategory = document.getElementById('breadcrumb-category');
-        breadcrumbCategory.textContent = ` / ${category}`;
-    }
-
-    
-    function filterProducts(category) {
-        const products = document.querySelectorAll('.product-item');
-        products.forEach(product => {
-            if (product.getAttribute('data-category').includes(category)) {
-                product.style.display = 'block';
-            } else {
-                product.style.display = 'none';
-            }
-        });
-        document.getElementById('category-title').textContent = `${category}商品`;
-    }
-
-    
-    document.addEventListener('DOMContentLoaded', function() {
-        const category = getQueryParams();
-        if (category) {
-            updateBreadcrumb(category);
-            filterProducts(category);
-        }
-    });
-</script>
 </body>
 <footer id="footer">
     <a href="index.html" class="footer-logo">
